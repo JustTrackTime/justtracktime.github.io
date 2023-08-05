@@ -37,40 +37,7 @@
 
     <link rel="icon" href="https://justtracktime.com/images/logo.svg">
     
-    <script>
-        var features;
-        var fi = 0;
-
-        function highlightNextFeature() {
-            features.children[fi].classList.remove("active")
-            fi++;
-            if (fi >= features.childElementCount) fi = 0;
-            features.children[fi].classList.add("active")
-        }
-
-        document.addEventListener('DOMContentLoaded', function () {
-            features = document.getElementById("features");
-
-            features.children[0].classList.add("active")
-
-            setInterval(highlightNextFeature, 3000)
-
-            var headerScreen = document.getElementById('header-screen');
-            const screenshotWidth = parseInt("350px");
-            new ResizeSensor(headerScreen, function () {
-                var diff = headerScreen.clientWidth - screenshotWidth;
-
-                if (diff > 0 && window.innerWidth < 767) {
-                    console.log('Needed padding is ' + diff);
-                    headerScreen.children[0].style.marginLeft = diff / 2 + "px";
-                    headerScreen.children[1].style.left = diff / 2 + "px";
-                } else {
-                    headerScreen.children[0].style.marginLeft = 0;
-                    headerScreen.children[1].style.left = 0;
-                }
-            });
-        });
-    </script>
+    
 
     <script src="https://justtracktime.com/js/ResizeSensor.js"></script>
     <script src="https://justtracktime.com/js//ElementQueries.js"></script>
@@ -91,27 +58,27 @@
       <a class="navbar-brand" href="#" style="padding-top: 30px">
         <img alt="Just Track Time App" src="https://justtracktime.com/images/logo.svg" class="app-icon">
       </a>	
-      <h1 style="width: 100%; text-align: center; padding-top: 10px;">Just Track Time App</h1>
+      <div>
+        <h2 style="width: 100%; text-align: center; padding-top: 10px;">Just Track Time App</h2>
+        Count your working time easily
+      </div>
+      
       <ul class="navbar-nav ml-auto pr-0 d-none d-md-flex">
         
-        <li class="nav-item">
-          <a class="nav-link" href="mailto:jtt@justprodev.com">Contact</a>
-        </li>
+        
       </ul>
     </div>
   </nav>
 
   <div id="main-header" class="container header">
     <div class="row">      
-      <div class="col-lg-6 header-screen" style="position: relative; display: inline;padding: 0; text-align: left" id="header-screen">
+      <div class="col-lg-3 header-screen" style="position: relative; display: inline;padding: 0; text-align: left" id="header-screen">
         
         
         <iframe src="https://justtracktime.com//screenshots.html" scrolling="no" style="width: 350px; height: 717.5px; padding: 16.18px;"></iframe>
         <img src="https://justtracktime.com/images/device.png" style="position: absolute; top: 0; left: 0; width: 350px;" />
       </div>
-      <div class="col-lg-6 col-xl-5 offset-xl-1 header-description">
-        <h2>Measure your hours to be <span class="text-success">paid</span></h2>
-        <p>... or just boost your productivity</p>
+      <div class="col-xl-5 offset-xl-1 header-description">
         <ul class="list-group" id="features">
           <li class="list-group-item">Android/iOS: equal apps with simple UI</li>
           <li class="list-group-item">convenient management of projects, activities, sessions</li>
@@ -119,7 +86,7 @@
           <li class="list-group-item">manual adding/editing/deleting of a saved sessions</li>
           <li class="list-group-item">archive entire projects or just activities</li>
           <li class="list-group-item">manual backup/restore (ex. backup on iOS - restore on Android, etc)</li>
-          <li class="list-group-item">statistics: period, grouping, export, etc</li>
+          <li class="list-group-item">statistics: period, grouping, export to CSV/HTML, etc</li>
           <li class="list-group-item">iOS: Display tracking in Dynamic Island and on the lock screen</li>
           <li class="list-group-item">Android: Display tracking in tray and on the lock screen</li>
         </ul>
@@ -137,20 +104,19 @@
 
 
 
-        </div><footer class="footer fixed-bottom bg-dark">
-
-  <div class="row footer-text">
+        </div><footer class="footer fixed-bottom bg-dark"> 
+  <div style="border-style: solid;border-bottom: 0;border-right: 0;border-left: 0;border-color: gray; border-width: 1px">
     <div style="text-align: center">
       <a target='_blank' href='https://apps.apple.com/kz/app/airbapay/id6444242388?itsct=apps_box_link&itscg=30200'><img
-          alt='Get JustTrackTime from AppStore' width='140'
+          alt='Get JustTrackTime from AppStore' width='110'
           src='https://apple-resources.s3.amazonaws.com/media-badges/download-on-the-app-store/black/en-us.svg' /></a>
       <a target='_blank'
         href='https://play.google.com/store/apps/details?id=com.justprodev.tracktime&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img
-          alt='Get JustTrackTime from Google Play' width='180'
+          alt='Get JustTrackTime from Google Play' width='144'
           src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' /></a>
     </div>
     
-    <div class="col-12 col-md text-center text-md-left nav-link text-white">&copy; 2023 JUSTPRODEV ST. All rights reserved.</div>
+    <div class="col-12 col-md text-center text-md-left nav-link text-white" style="padding-bottom: 8px; font-size: 10px">&copy; 2023 JUSTPRODEV ST. All rights reserved.</div>
 
     
 
